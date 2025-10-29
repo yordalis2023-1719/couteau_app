@@ -31,7 +31,7 @@ android {
     namespace "com.example.couteau_app"
     compileSdkVersion flutter.compileSdkVersion
     
-    // Configurar NDK específico para evitar problemas
+  
     ndkVersion "25.1.8937393"
 
     compileOptions {
