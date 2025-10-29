@@ -140,7 +140,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                // Icono del clima
+                                
                                 Stack(
                                   alignment: Alignment.center,
                                   children: [
@@ -155,7 +155,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                                         width: 60,
                                         height: 60,
                                         errorBuilder: (context, error, stackTrace) {
-                                          return SizedBox(); // Fallback al icono
+                                          return SizedBox(); 
                                         },
                                       ),
                                   ],
@@ -163,7 +163,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                                 
                                 SizedBox(height: 20),
                                 
-                                // Ubicación
+                           
                                 Text(
                                   _weatherData!.location,
                                   style: TextStyle(
@@ -176,7 +176,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                                 
                                 SizedBox(height: 15),
                                 
-                                // Temperatura
+                               
                                 Text(
                                   '${_weatherData!.temperature.toStringAsFixed(1)}°C',
                                   style: TextStyle(
@@ -188,7 +188,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                                 
                                 SizedBox(height: 10),
                                 
-                                // Descripción
+                            
                                 Text(
                                   _weatherData!.description,
                                   style: TextStyle(
@@ -200,7 +200,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                                 
                                 SizedBox(height: 30),
                                 
-                                // Información adicional
+                             
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
@@ -221,7 +221,6 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                                 
                                 SizedBox(height: 20),
                                 
-                                // Mensaje de actualización
                                 Text(
                                   'Actualizado: ${DateTime.now().toString().substring(11, 16)}',
                                   style: TextStyle(
@@ -230,7 +229,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
                                   ),
                                 ),
                                 
-                                // Indicador de datos reales
+                                
                                 if (_isRealData) ...[
                                   SizedBox(height: 10),
                                   Container(
