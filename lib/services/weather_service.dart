@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/weather_model.dart';
 
 class WeatherService {
-  // API Key de WeatherAPI.com proporcionada
+  
   static const String apiKey = '9be658cba2a5457b8cf01710252910';
   static const String baseUrl = 'http://api.weatherapi.com/v1/current.json';
 
@@ -29,7 +29,7 @@ class WeatherService {
     }
   }
 
-  // Método alternativo para otras ciudades de RD
+  
   Future<WeatherData> getWeatherByCity(String city) async {
     try {
       final response = await http.get(
@@ -47,7 +47,7 @@ class WeatherService {
   }
 
   WeatherData _getExampleWeather() {
-    // Datos de ejemplo como fallback
+    
     return WeatherData(
       location: 'Santo Domingo, República Dominicana',
       temperature: 28.0,
