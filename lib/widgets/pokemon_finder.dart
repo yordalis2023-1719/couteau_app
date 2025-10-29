@@ -47,7 +47,7 @@ class _PokemonFinderState extends State<PokemonFinder> {
   }
 
   void _playPokemonSound() async {
-    // Usar un sonido genérico o buscar uno específico del Pokémon
+    
     try {
       await _audioPlayer.play(UrlSource('https://www.soundjay.com/button/beep-07.wav'));
     } catch (e) {
@@ -147,8 +147,8 @@ class _PokemonFinderState extends State<PokemonFinder> {
               ),
             if (_pokemon != null) ...[
               SizedBox(height: 20),
-              Expanded(  // 👈 ESTO ARREGLA EL OVERFLOW
-                child: SingleChildScrollView(  // 👈 Y ESTO PERMITE SCROLL
+              Expanded(  
+                child: SingleChildScrollView( 
                   child: Card(
                     elevation: 4,
                     child: Padding(
