@@ -3,19 +3,19 @@ import 'package:http/http.dart' as http;
 import '../models/news_model.dart';
 
 class NewsService {
-  // LISTA DE SITIOS WORDPRESS CON API HABILITADA
+  
   static const List<String> wordpressSites = [
-    'https://techcrunch.com/wp-json/wp/v2/posts',          // Noticias de tecnología
-    'https://wptavern.com/wp-json/wp/v2/posts',            // Comunidad WordPress
-    'https://wordpress.org/news/wp-json/wp/v2/posts',      // Noticias oficiales WordPress
-    'https://es.wordpress.org/news/wp-json/wp/v2/posts',   // WordPress en español
+    'https://techcrunch.com/wp-json/wp/v2/posts',          
+    'https://wptavern.com/wp-json/wp/v2/posts',            
+    'https://wordpress.org/news/wp-json/wp/v2/posts',      
+    'https://es.wordpress.org/news/wp-json/wp/v2/posts',   
   ];
 
   int _currentSiteIndex = 0;
   bool _isRealData = true;
 
   Future<List<NewsArticle>> getWordPressNews() async {
-    // Intentar con cada sitio hasta que uno funcione
+    
     for (int i = 0; i < wordpressSites.length; i++) {
       _currentSiteIndex = i;
       try {
@@ -30,7 +30,7 @@ class NewsService {
       }
     }
     
-    // Si ningún sitio funciona, usar datos de ejemplo
+    
     _isRealData = false;
     return _getExampleNews();
   }
