@@ -14,7 +14,7 @@ class UniversityService {
     if (response.statusCode == 200) {
       final responseData = json.decode(response.body);
       
-      // Manejar diferentes formatos de respuesta
+      
       if (responseData is Map && responseData['universidades'] != null) {
         final List<dynamic> data = responseData['universidades'];
         return data.map((json) => University.fromJson(json)).toList();
