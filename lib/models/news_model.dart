@@ -16,7 +16,7 @@ class NewsArticle {
   });
 
   factory NewsArticle.fromJson(Map<String, dynamic> json) {
-    // Extraer título
+    
     String title = 'Sin título';
     if (json['title'] is Map && json['title']['rendered'] != null) {
       title = _cleanHtml(json['title']['rendered']);
@@ -24,7 +24,7 @@ class NewsArticle {
       title = json['title'];
     }
 
-    // Extraer extracto
+    
     String excerpt = 'No hay descripción disponible.';
     if (json['excerpt'] is Map && json['excerpt']['rendered'] != null) {
       excerpt = _cleanHtml(json['excerpt']['rendered']);
@@ -33,7 +33,6 @@ class NewsArticle {
       }
     }
 
-    // Extraer imagen destacada
     String? featuredImage;
     if (json['_embedded'] != null && 
         json['_embedded']['wp:featuredmedia'] != null &&
@@ -41,7 +40,6 @@ class NewsArticle {
       featuredImage = json['_embedded']['wp:featuredmedia'][0]['source_url'];
     }
 
-    // Determinar nombre del sitio desde el link
     String siteName = 'WordPress';
     final link = json['link'] ?? '';
     if (link.contains('techcrunch')) siteName = 'TechCrunch';
