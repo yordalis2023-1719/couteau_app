@@ -14,7 +14,7 @@ class AboutWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // TU FOTO - REEMPLAZA CON TUS DATOS
+            
             CircleAvatar(
               radius: 60,
               backgroundImage: AssetImage('assets/icon/icon.png'),
