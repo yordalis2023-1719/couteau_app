@@ -22,7 +22,6 @@ class WeatherData {
     final current = json['current'] ?? {};
     final condition = current['condition'] ?? {};
 
-    // Manejar diferentes formatos de icono
     String iconUrl = condition['icon'] ?? '';
     if (iconUrl.isNotEmpty && !iconUrl.startsWith('http')) {
       iconUrl = 'https:${condition['icon']}';
