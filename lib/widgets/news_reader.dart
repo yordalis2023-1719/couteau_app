@@ -69,7 +69,7 @@ class _NewsReaderState extends State<NewsReader> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header con sitio y fecha
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -101,7 +101,7 @@ class _NewsReaderState extends State<NewsReader> {
               
               SizedBox(height: 12),
               
-              // Título
+           
               Text(
                 article.title,
                 style: TextStyle(
@@ -116,7 +116,7 @@ class _NewsReaderState extends State<NewsReader> {
               
               SizedBox(height: 8),
               
-              // Extracto
+              
               Text(
                 article.excerpt,
                 style: TextStyle(
@@ -130,7 +130,7 @@ class _NewsReaderState extends State<NewsReader> {
               
               SizedBox(height: 12),
               
-              // Botón de acción
+             
               Align(
                 alignment: Alignment.centerRight,
                 child: ElevatedButton.icon(
@@ -245,7 +245,7 @@ class _NewsReaderState extends State<NewsReader> {
   Widget _buildNewsList() {
     return Column(
       children: [
-        // Header informativo
+        
         Container(
           width: double.infinity,
           padding: EdgeInsets.all(16),
@@ -307,7 +307,7 @@ class _NewsReaderState extends State<NewsReader> {
           ),
         ),
         
-        // Lista de noticias
+      
         Expanded(
           child: ListView.builder(
             padding: EdgeInsets.all(12),
